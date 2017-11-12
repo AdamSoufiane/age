@@ -7,14 +7,14 @@
                   targetNamespace="http://localhost:8080/Age/">
     <wsdl:types>
         <xsd:schema targetNamespace="http://localhost:8080/Age/">
-            <xsd:element name="GetAgeRq">
+            <xsd:element name="getAge">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="naissance" type="xsd:integer"/>
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="GetAgeRs">
+            <xsd:element name="getAgeRs">
                 <xsd:complexType>
                     <xsd:sequence>
                         <xsd:element name="age" type="xsd:integer"/>
@@ -23,22 +23,22 @@
             </xsd:element>
         </xsd:schema>
     </wsdl:types>
-    <wsdl:message name="GetAgeRq">
-        <wsdl:part element="tns:GetAgeRq" name="parameters"/>
+    <wsdl:message name="getAge">
+        <wsdl:part element="tns:getAge" name="parameters"/>
     </wsdl:message>
-    <wsdl:message name="GetAgeRs">
-        <wsdl:part element="tns:GetAgeRs" name="parameters"/>
+    <wsdl:message name="getAgeRs">
+        <wsdl:part element="tns:getAgeRs" name="parameters"/>
     </wsdl:message>
     <wsdl:portType name="AgePortType">
-        <wsdl:operation name="GetAge">
-            <wsdl:input message="tns:GetAgeRq"/>
-            <wsdl:output message="tns:GetAgeRs"/>
+        <wsdl:operation name="getAge">
+            <wsdl:input message="tns:getAge"/>
+            <wsdl:output message="tns:getAgeRs"/>
         </wsdl:operation>
     </wsdl:portType>
     <wsdl:binding name="AgeSOAP" type="tns:AgePortType">
         <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-        <wsdl:operation name="GetAge">
-            <soap:operation soapAction="http://localhost:8080/Age/GetAge"/>
+        <wsdl:operation name="getAge">
+            <soap:operation soapAction="http://localhost:8080/Age/getAge"/>
             <wsdl:input>
                 <soap:body use="literal"/>
             </wsdl:input>
