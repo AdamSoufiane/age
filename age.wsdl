@@ -12,7 +12,7 @@
             <xs:element name="getAgeResponse" type="tns:getAgeResponse"/>
             <xs:complexType name="getAge">
                 <xs:sequence>
-                    <xs:element name="arg0" type="xs:int" minOccurs="0"/>
+                    <xs:element name="naissance" type="xs:int" minOccurs="0"/>
                 </xs:sequence>
             </xs:complexType>
             <xs:complexType name="getAgeResponse">
@@ -37,7 +37,6 @@
     <binding name="AgeServicePortBinding" type="tns:AgeService">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
         <operation name="getAge">
-            <soap:operation soapAction=""/>
             <input>
                 <soap:body use="literal"/>
             </input>
