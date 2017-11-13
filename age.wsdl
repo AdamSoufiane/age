@@ -5,9 +5,9 @@
         targetNamespace="http://ageservice/"
         xmlns:tns="http://ageservice/"
         xmlns="http://schemas.xmlsoap.org/wsdl/"
-        name="AgeServiceYeaaah">
+        name="AgeService">
     <types>
-        <xs:schema xmlns:tns="http://ageservice/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ageservice/">
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  targetNamespace="http://ageservice/">
             <xs:element name="getAge" type="tns:getAge"/>
             <xs:element name="getAgeResponse" type="tns:getAgeResponse"/>
             <xs:complexType name="getAge">
