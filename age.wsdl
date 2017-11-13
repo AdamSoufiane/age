@@ -37,6 +37,7 @@
     <binding name="AgeServicePortBinding" type="tns:AgeService">
         <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
         <operation name="getAge">
+            <soap:operation soapAction=""/>
             <input>
                 <soap:body use="literal"/>
             </input>
