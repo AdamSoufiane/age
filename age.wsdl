@@ -1,14 +1,11 @@
-<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" 
-             xmlns:wsp="http://www.w3.org/ns/ws-policy" 
-             xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" 
-             xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+<definitions
              xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
-             xmlns:tns="http://localhost:8080/"
+             xmlns:tns="http://ageservice/"
              xmlns:xsd="http://www.w3.org/2001/XMLSchema"
              xmlns="http://schemas.xmlsoap.org/wsdl/"
-             targetNamespace="http://localhost:8080/" name="getAge">
+             targetNamespace="http://ageservice/" name="getAge">
     <types>
-        <xs:schema xmlns:tns="http://localhost:8080/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://localhost:8080/">
+        <xs:schema xmlns:tns="http://ageservice/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ageservice/">
             <xs:element name="getAge" type="tns:getAge"/>
             <xs:element name="getAgeResponse" type="tns:getAgeResponse"/>
             <xs:complexType name="getAge">
@@ -31,8 +28,8 @@
     </message>
     <portType name="AgeService">
         <operation name="getAge">
-            <input wsam:Action="http://localhost:8080/AgeService/getAgeRequest" message="tns:getAge"/>
-            <output wsam:Action="http://localhost:8080/AgeService/getAgeResponse" message="tns:getAgeResponse"/>
+            <input message="tns:getAge"/>
+            <output message="tns:getAgeResponse"/>
         </operation>
     </portType>
     <binding name="AgeServicePortBinding" type="tns:AgeService">
