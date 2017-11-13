@@ -2,9 +2,9 @@
              xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
              xmlns:tns="http://ageservice/"
              xmlns="http://schemas.xmlsoap.org/wsdl/"
-             targetNamespace="http://ageservice/wsdl" name="getAge">
+             targetNamespace="http://ageservice/" name="getAge">
     <types>
-        <xs:schema xmlns:tns="http://ageservice/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ageservice/xsd">
+        <xs:schema xmlns:tns="http://ageservice/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ageservice/">
             <xs:element name="getAge" type="tns:getAge"/>
             <xs:element name="getAgeResponse" type="tns:getAgeResponse"/>
             <xs:complexType name="getAge">
