@@ -31,8 +31,8 @@
     </message>
     <portType name="AgeService">
         <operation name="getAge">
-            <input message="tns:getAge"/>
-            <output message="tns:getAgeResponse"/>
+            <input wsam:Action="http://ageservice/AgeService/getAgeRequest" message="tns:getAge"/>
+            <output wsam:Action="http://ageservice/AgeService/getAgeResponse" message="tns:getAgeResponse"/>
         </operation>
     </portType>
     <binding name="AgeServicePortBinding" type="tns:AgeService">
